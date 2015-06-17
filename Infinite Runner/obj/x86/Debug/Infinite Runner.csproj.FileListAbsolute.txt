@@ -1,0 +1,42 @@
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Infinite Runner.exe
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Infinite Runner.pdb
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\MonoGame.Framework.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.XAudio2.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.Direct3D11.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.DXGI.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.Direct2D1.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Lidgren.Network.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.XInput.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.RawInput.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.Direct3D9.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.XAudio2.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.Direct3D11.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.DXGI.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.Direct2D1.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.XInput.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.RawInput.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\SharpDX.Direct3D9.xml
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\obj\x86\Debug\Infinite Runner.csprojResolveAssemblyReference.cache
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\obj\x86\Debug\Infinite Runner.exe
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\obj\x86\Debug\Infinite Runner.pdb
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\blue_tile.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\orange_tile.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\green_tile.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\red_tile.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\IgnoreMe.dll
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\Score.spritefont
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\flatastic.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\Score.xnb
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\flatastic.xnb
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\flatastic2D.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\the_light.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Infinite Runner.exe.config
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\flame_sprite.png
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\Transmission.xnb
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\Swoosh.xnb
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\Transmission.mp3
+D:\_kanatamon\Studio\Infinite Runner\Infinite Runner\bin\Windows\Debug\Content\Swoosh.mp3

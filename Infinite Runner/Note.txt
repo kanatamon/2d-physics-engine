@@ -1,0 +1,59 @@
+﻿/// <summary>
+        /// Add new Collider then attached to the gameObject ,
+        /// </summary>
+        public Collider AddCollider()
+        {
+            Collider collider = new Collider(this);
+            
+            // Check if the colliders have never created .
+            if(colliders == null)
+            {
+                // Create the layer 
+                layer = new Layer(this);
+                
+                components.Add(layer);// Add the rigidbody to the Physics2D
+
+                // Create the list 
+                colliders = new List<Collider>();
+
+                // Add the gameObject to the Physics2D collection , there is some collider
+                scene.GameColliders.Add(this);
+            }
+
+            components.Add(collider);   // Add the component to the collection
+            colliders.Add(collider); // Attach the new collider to this gameObject 
+
+            return collider;
+        }
+
+        /// <summary>
+        /// Add the rigidbody then attach to the gameObject ,
+        /// </summary>
+        public Rigidbody2D AddRigidbody()
+        {
+            // Check if the gameObject never had a rigidbody .
+            if (rigidbody == null)
+            {
+                rigidbody = new Rigidbody2D(this);
+
+                components.Add(rigidbody);// Add the component to the collection
+                scene.Rigidbodies.Add(rigidbody);// Add the rigidbody to the Physics2D
+
+            }
+
+            return rigidbody;
+        }
+
+        public Renderer2D AddRenderer2D()
+        {
+            Renderer2D render = new Renderer2D();
+            components.Add(render);
+            renderer2D = render;
+
+            // Attach this gameObject to the component
+            PropertyInfo propT = typeof(Renderer2D).GetProperty("gameObject");
+            propT.SetValue(render, this, null);
+
+            return render;
+        }
+

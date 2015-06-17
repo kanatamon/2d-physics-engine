@@ -1,0 +1,12 @@
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\IgnoreMe.dll
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\obj\PSM\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\obj\PSM\IgnoreMe.dll
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\Score.xnb
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\Score.spritefont
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\flatastic.xnb
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\flatastic.png
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\Transmission.xnb
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\Swoosh.xnb
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\Transmission.mp3
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\bin\PSM\Content\Swoosh.mp3
+D:\_kanatamon\Studio\Infinite Runner\GameContent\GameContent\obj\PSM\GameContent.csprojResolveAssemblyReference.cache

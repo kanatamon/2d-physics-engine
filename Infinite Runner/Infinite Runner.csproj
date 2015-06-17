@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66D2AAC6-C0E8-443A-B0C9-DC5DA19DCDAE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infinite_Runner</RootNamespace>
+    <AssemblyName>Infinite Runner</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="InfiniteGame\BoxObj.cs" />
+    <Compile Include="InfiniteGame\CircleObj.cs" />
+    <Compile Include="InfiniteGame\MakeCollider.cs" />
+    <Compile Include="InfiniteGame\Message.cs" />
+    <Compile Include="InfiniteGame\PolygonObj.cs" />
+    <Compile Include="InfiniteGame\TestDestroy.cs" />
+    <Compile Include="KanataEditor\KanataTool.cs" />
+    <Compile Include="KanataEngine\Animation.cs" />
+    <Compile Include="KanataEngine\Animator.cs" />
+    <Compile Include="KanataEngine\Behavior.cs" />
+    <Compile Include="KanataEngine\BoxCollider.cs" />
+    <Compile Include="KanataEngine\CircleCollider.cs" />
+    <Compile Include="KanataEngine\CollisionInfo.cs" />
+    <Compile Include="KanataEngine\Component.cs" />
+    <Compile Include="InfiniteGame\Ride.cs" />
+    <Compile Include="KanataEngine\Camera.cs" />
+    <Compile Include="KanataEngine\GUIStyle.cs" />
+    <Compile Include="KanataEngine\Input.cs" />
+    <Compile Include="KanataEngine\GameObject.cs" />
+    <Compile Include="InfiniteRunnerGame.cs" />
+    <Compile Include="KanataEngine\Collider.cs" />
+    <Compile Include="KanataEngine\KanataObject.cs" />
+    <Compile Include="KanataEngine\Layer.cs" />
+    <Compile Include="KanataEngine\Mathf.cs" />
+    <Compile Include="KanataEngine\Physics2D.cs" />
+    <Compile Include="KanataEngine\PolygonCollider.cs" />
+    <Compile Include="KanataEngine\Renderer2D.cs" />
+    <Compile Include="KanataEngine\Rigidbody2D.cs" />
+    <Compile Include="KanataEngine\Skin.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="InfiniteGame\Demo.cs" />
+    <Compile Include="KanataEngine\GUI.cs" />
+    <Compile Include="KanataEngine\Scene.cs" />
+    <Compile Include="KanataEngine\SceneManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\blue_tile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\flame_sprite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\flatastic2D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\orange_tile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\green_tile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\red_tile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\the_light.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icon.ico" />
+    <Content Include="Note.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameContent\GameContent\GameContent.csproj">
+      <Project>{76aa1fa4-94e1-4760-b459-b2ab792d60b1}</Project>
+      <Name>GameContent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
