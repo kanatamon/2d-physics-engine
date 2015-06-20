@@ -81,7 +81,7 @@ namespace Infinite_Runner.KanataEngine
         private static void InitUpdate()
         {
             // clear lists
-            gameRigidbodies.Clear();
+            //gameRigidbodies.Clear();
             gameColliders.Clear();
             //scene.GameObjects.
             foreach (GameObject gameObject in scene.GameObjects)
@@ -92,7 +92,7 @@ namespace Infinite_Runner.KanataEngine
                     gameRigidbodies.Add(gameObject.rigidbody);
                 */
                 // Check if there is any collider in gameObject
-                if (gameObject.colliders.Count > 0 && gameObject.GetComponent<Rigidbody2D>() != null) 
+                if (gameObject.GetComponents<Collider>().Count > 0 && gameObject.GetComponent<Rigidbody2D>() != null) 
                     gameColliders.Add(gameObject);
           
             }
@@ -124,7 +124,7 @@ namespace Infinite_Runner.KanataEngine
                 Matrix toWorldMat = Matrix.CreateRotationZ(MathHelper.ToRadians(gameObj.rotation))
                     * Matrix.CreateTranslation(gameObj.position.X, gameObj.position.Y, 0f);
                 
-                foreach (Collider collider in gameObj.colliders)
+                foreach (Collider collider in gameObj.GetComponents<Collider>())
                 {
                     // calculate world coordinate from local coordinate 
                     Vector2 centerOnWorld = Vector2.Transform(collider.center, toWorldMat);
@@ -252,22 +252,27 @@ namespace Infinite_Runner.KanataEngine
             // Generate new collision info
             contacts.Clear();
 
+            // Combine two of gameobjects for detecting collision.
             for (int i = 0; i < gameColliders.Count; ++i)
             {   
                 for (int j = i + 1; j < gameColliders.Count; ++j)
                 {
-                    // Reject collision if the colliders are infinite.  
+                    // Reject collision if both of colliders's mass are infinite.  
                     if (gameColliders[i].GetComponent<Rigidbody2D>().invMass == 0.0f
                         && gameColliders[j].GetComponent<Rigidbody2D>().invMass == 0.0f)
                         continue;
                     
+                    // Combine two of attached colliders owner by gameObject. 
                     foreach (Collider a in gameColliders[i].GetComponents<Collider>())
                     {
-                        foreach (Collider b in gameColliders[j].GetComponents<C>)
+                        foreach (Collider b in gameColliders[j].GetComponents<Collider>())
                         {
+                            // Creating a collision info.
                             CollisionInfo info = new CollisionInfo(a, b);
+                            // Check collisoin.
                             info.Solve();
 
+                            // Add the collision info if there is a collision between the gameObjects.
                             if (info.contactCount > 0)
                                 contacts.Add(info);
                         }
@@ -302,8 +307,11 @@ namespace Infinite_Runner.KanataEngine
             for (int i = 0; i < gameColliders.Count; ++i)
             {
                 //Point scrPos = Camera.main.WorldToScreen(gameColliders[i].position);
-                gameColliders[i].GetComponent<Rigidbody2D>().force = Vector2.Zero;
-                gameColliders[i].GetComponent<Rigidbody2D>().torque = 0.0f;
+                Rigidbody2D rb = gameColliders[i].GetComponent<Rigidbody2D>();
+                rb.force = Vector2.Zero;
+                rb.torque = 0f;
+                //gameColliders[i].GetComponent<Rigidbody2D>().force = Vector2.Zero;
+                //gameColliders[i].GetComponent<Rigidbody2D>().torque = 0.0f;
 
             }
            // Console.WriteLine("Total : "+gameColliders.Count);
@@ -316,9 +324,9 @@ namespace Infinite_Runner.KanataEngine
             rb.gameObject.position += rb.velocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
             //b.orient += b.angularVelocity * (float)gameTime.ElapsedGameTime.TotalMinutes;
             rb.gameObject.rotation += MathHelper.ToDegrees(rb.angularVelocity * (float)gameTime.ElapsedGameTime.TotalSeconds);
-
+            
             // apply rotation to collider
-            foreach (Collider collider in rb.gameObject.colliders)
+            foreach (Collider collider in rb.gameObject.GetComponents<Collider>())
                 collider.SetOrient();
     
             IntegateForces(rb, gameTime);
@@ -329,7 +337,8 @@ namespace Infinite_Runner.KanataEngine
             if (rb.invMass == 0.0f) return;
             
             rb.velocity += (rb.force * rb.invMass + rb.gravity) * (float)gameTime.ElapsedGameTime.TotalSeconds / 2.0f;
-            rb.angularVelocity += rb.torque * rb.invInertia * (float)gameTime.ElapsedGameTime.TotalSeconds / 2.0f;
+            //rb.angularVelocity += rb.torque * rb.invInertia * (float)gameTime.ElapsedGameTime.TotalSeconds / 2.0f;
+            rb.angularVelocity = 0f;
         }
 
         static float FindAxisLeastPenetration(ref int faceIndex, PolygonCollider A, PolygonCollider B)

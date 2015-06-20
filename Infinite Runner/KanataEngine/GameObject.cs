@@ -23,15 +23,16 @@ namespace Infinite_Runner.KanataEngine
         private List<Component> components = new List<Component>();
 
         // The collection of update object that attached to this gameObject.
-        private List<Behavior> behaviors = new List<Behavior>();
+        //private List<Behavior> behaviors = new List<Behavior>();
         
+        /*
         // The collection of collider attached to the gameObject.
         private List<Collider> _colliders = new List<Collider>();
         public List<Collider> colliders 
         {
             get { return _colliders; }
             private set { _colliders = value; } 
-        }
+        }*/
 
         /*
         // The rigidbody attached to the gameObject.
@@ -71,7 +72,9 @@ namespace Infinite_Runner.KanataEngine
         /// </summary>
         public virtual void Start() 
         {
-            foreach (Behavior behavior in behaviors) behavior.Start();
+            // Call start for each component.
+            foreach (Behavior behavior in GetComponents<Behavior>()) 
+                behavior.Start();
         }
 
         #endregion
@@ -82,11 +85,9 @@ namespace Infinite_Runner.KanataEngine
         /// </summary>
         public void Update(GameTime gameTime)
         { 
-            foreach(Behavior behavior in behaviors)
-            {
+            // Call update for each component.
+            foreach(Behavior behavior in GetComponents<Behavior>())
                 behavior.Update(gameTime);
-
-            }
 
             // Update the animator.
             Animator animator = GetComponent<Animator>();
@@ -99,10 +100,10 @@ namespace Infinite_Runner.KanataEngine
         /// </summary>
         public void OnGUI()
         {
-            foreach (Behavior behavior in behaviors)
-            {
+            // Draw GUI element for each component.
+            foreach (Behavior behavior in GetComponents<Behavior>())
                 behavior.OnGUI();
-            }
+            
         }
 
         /// <summary>
@@ -110,10 +111,10 @@ namespace Infinite_Runner.KanataEngine
         /// </summary>
         public void OnCollision(GameObject other) 
         {
-            foreach (Behavior behavior in behaviors)
-            {
+            // Call collision function for each component.
+            foreach (Behavior behavior in GetComponents<Behavior>())
                 behavior.OnCollision(other);
-            }
+            
         }
 
         /// <summary>
@@ -121,13 +122,12 @@ namespace Infinite_Runner.KanataEngine
         /// </summary>
         public void OnTrigger(GameObject other) 
         {
-            foreach (Behavior behavior in behaviors)
-            {
+            // Call trigger fucntion for each component.
+            foreach (Behavior behavior in GetComponents<Behavior>())
                 behavior.OnTrigger(other);
-            }
+            
         }
       
-
         #endregion
 
         #region Conponent's Method
@@ -160,7 +160,7 @@ namespace Infinite_Runner.KanataEngine
         /// <summary>
         /// Returns all components of Type type in the GameObject.
         /// </summary>
-        public IEnumerable<T> GetComponents<T>() where T : Component
+        public IList<T> GetComponents<T>() where T : Component
         {
             List<T> list = new List<T>();
 
@@ -191,7 +191,7 @@ namespace Infinite_Runner.KanataEngine
             // Attach the component to this gameObject 
             components.Add(component);
 
-            // 
+            /*
             if (typeT.IsSubclassOf(typeof(Behavior)))
             {
                 // Subclass of Behavior , has update method
@@ -212,9 +212,9 @@ namespace Infinite_Runner.KanataEngine
                         colliders.Add((CircleCollider)component);
                     
                 }
-    
             }
-            
+            */
+
             return (T)component;
         }
 

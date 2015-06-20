@@ -6,6 +6,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Infinite_Runner.KanataEngine
 {
+    struct Constraint
+    {
+        public bool FreezePositionX;
+        public bool FreezePositionY;
+        public bool FreezePositionZ;
+        public bool FreezeRotation;
+    }   
+
     class Rigidbody2D : Component
     {
         #region The GameObject reference
@@ -21,9 +29,9 @@ namespace Infinite_Runner.KanataEngine
         }
         
         #endregion
-
+        
         #region The properties of the rigidbody
-
+        public Constraint constraint;// = default(Constraint);
         // The velocity of the rigidbody
         public Vector2 velocity = Vector2.Zero;
 

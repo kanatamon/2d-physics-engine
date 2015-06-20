@@ -72,9 +72,8 @@ namespace Infinite_Runner.KanataEngine
                 Vector2 rb = contacts[i] - B.gameObject.position;
 
                 // Relative velocity 
-                Vector2 rv =
-                    B.rigidbody.velocity + Mathf.Cross(B.rigidbody.angularVelocity, rb) -
-                    A.rigidbody.velocity - Mathf.Cross(A.rigidbody.angularVelocity, ra);
+                Vector2 rv = B.rigidbody.velocity + Mathf.Cross(B.rigidbody.angularVelocity, rb) 
+                            - A.rigidbody.velocity - Mathf.Cross(A.rigidbody.angularVelocity, ra);
 
                 // Relative velocity along the normal
                 float contactVel = Vector2.Dot(rv, normal);

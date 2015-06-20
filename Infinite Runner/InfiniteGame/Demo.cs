@@ -49,8 +49,8 @@ namespace Infinite_Runner.InfiniteGame
             PolygonObj polyObj = new PolygonObj(this);
             //polyObj.Initialize(this);
 
-            AddGameObjectOnLoad(cirObj);
-            //GameObjects.Add(polyObj);
+            //AddGameObjectOnLoad(cirObj);
+            AddGameObjectOnLoad(polyObj);
             AddGameObjectOnLoad(boxObj);
             
             /*

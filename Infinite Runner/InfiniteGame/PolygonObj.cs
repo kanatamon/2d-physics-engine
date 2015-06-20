@@ -39,7 +39,7 @@ namespace Infinite_Runner.InfiniteGame
             //Console.WriteLine(vertise == null);
             poly.SetVertices(vertise);
             
-            rotation = 44.9f;
+            rotation = 30f;
             poly.SetOrient();
             poly.center = new Vector2(20f, 100f);
 
@@ -50,7 +50,12 @@ namespace Infinite_Runner.InfiniteGame
             rigid.mass = 10f;
             rigid.inertia = 100000f;
             rigid.gravityScale = 10f;
-            rigid.angularVelocity = -0.5f;
+            //rigid.angularVelocity = -0.5f;
+            Console.WriteLine(rigid.constraint.FreezePositionX.ToString());
+            Console.WriteLine(rigid.constraint.FreezePositionY.ToString());
+            Console.WriteLine(rigid.constraint.FreezePositionZ.ToString());
+            Console.WriteLine(rigid.constraint.FreezeRotation.ToString());
+        
         }
 
     }
